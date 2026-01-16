@@ -1,26 +1,9 @@
 @import "tailwindcss";
-@tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Tailwind v4 dark mode setup */
+@custom-variant dark (&:where(.dark, .dark *));
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Global page style */
 html,
 body {
   @apply w-full h-full m-0 p-0;
@@ -30,7 +13,7 @@ body {
   @apply bg-white text-black dark:bg-gray-900 dark:text-white;
 }
 
-/* button ကို Tailwind နဲ့ပဲ ထိန်းမယ် */
+/* Button default */
 button {
   @apply rounded px-4 py-2 transition;
 }

@@ -9,7 +9,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
             Automatic Color Sorting <br /> Robotic Arm
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+          <p className="text-gray-700 max-w-2xl mx-auto md:mx-0 leading-relaxed">
             A smart robotic system designed to detect object colors and sort them
             automatically using sensors, microcontrollers, and servo-driven
             robotic mechanisms.
