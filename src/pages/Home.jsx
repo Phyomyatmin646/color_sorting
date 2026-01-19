@@ -1,40 +1,45 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
-
       {/* Hero Section */}
       <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-20">
         {/* Text */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
+          <h1 className="tech-title text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
             Automatic Color Sorting <br /> Robotic Arm
           </h1>
-          <p className="text-gray-700 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-            A smart robotic system designed to detect object colors and sort them
-            automatically using sensors, microcontrollers, and servo-driven
-            robotic mechanisms.
-          </p>
+          <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
+            <p className="text-gray-550 leading-relaxed">
+              This project is developed as a university-level robotic system
+              focusing on automation and embedded technologies. It demonstrates
+              how sensors, microcontrollers, and mechanical systems can be
+              integrated to solve real-world industrial problems such as object
+              sorting.
+            </p>
+          </div>
 
           <div className="mt-8 flex justify-center md:justify-start gap-4">
-            <a
-              href="/structure"
+            <Link
+              to="/structure"
               className="px-6 py-3 rounded bg-blue-800 hover:bg-blue-400 transition shadow-lg shadow-blue-900/50"
             >
               System Structure
-            </a>
-            <a
-              href="/guideline"
+            </Link>
+            <Link
+              to="/guideline"
               className="px-6 py-3 rounded border border-blue-500 text-blue-400 hover:bg-blue-500/10 transition"
             >
               User Guideline
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Robotic Arm Image */}
         <div className="flex-1 flex justify-center md:justify-end">
           <img
-            src="/robotic-arm.png"   
+            src="/robotic-arm.png"
             alt="Robotic Arm"
             className="w-64 h-64 md:w-80 md:h-80 object-contain bg-blend-color"
           />
@@ -62,10 +67,9 @@ export default function Home() {
 
 function FeatureCard({ title, text }) {
   return (
-    <div className="bg-gray-950 border border-blue-900 rounded-xl p-6 hover:shadow-xl hover:shadow-blue-900/40 transition">
+    <div className="bg-gray-650 border border-blue-900 rounded-xl p-6 hover:shadow-xl hover:shadow-blue-900/40 transition">
       <h3 className="text-xl font-semibold text-blue-400 mb-3">{title}</h3>
-      <p className="text-gray-300 text-sm leading-relaxed">{text}</p>
+      <p className="text-gray-550 text-sm leading-relaxed">{text}</p>
     </div>
   );
 }
-

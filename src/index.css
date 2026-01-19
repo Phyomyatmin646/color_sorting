@@ -6,14 +6,72 @@
 /* Global page style */
 html,
 body {
-  @apply w-full h-full m-0 p-0;
+  @apply w-full h-full m-0 p-0 transition-colors duration-300;
 }
 
 body {
-  @apply bg-white text-black dark:bg-gray-900 dark:text-white;
+  @apply bg-linear-to-r from-slate-50 to-slate-200
+         text-gray-900
+         dark:from-slate-950 dark:to-slate-900
+         dark:text-white;
 }
 
-/* Button default */
+/* App root */
+#root {
+  @apply min-h-screen transition-colors duration-300;
+}
+
+/* Tech grid background helper */
+.tech-grid {
+  background:
+    linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Headings – robotic gradient text */
+.tech-title {
+  @apply bg-clip-text text-transparent
+         bg-linear-to-r from-cyan-400 to-blue-500;
+}
+
+/* Cards – glass tech style */
+.tech-card {
+  @apply rounded-xl border
+         border-cyan-400/20
+         bg-white/70 backdrop-blur
+         dark:bg-slate-900/60
+         p-5
+         transition-all duration-300
+         hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(56,189,248,0.4)];
+}
+
+/* Buttons – futuristic */
 button {
-  @apply rounded px-4 py-2 transition;
+  @apply rounded-full px-5 py-2 font-medium
+         transition-all duration-300
+         bg-linear-to-r from-cyan-400 to-blue-500
+         text-slate-950
+         hover:scale-105 hover:shadow-[0_0_25px_rgba(56,189,248,0.6)]
+         dark:text-slate-900;
+}
+
+.tech-card::after {
+  content: attr(data-info);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  opacity: 0;
+  transition: 0.3s;
+  white-space: pre-line;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
 }
