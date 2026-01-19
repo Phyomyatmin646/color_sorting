@@ -251,7 +251,10 @@ void blueTask() {
             <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
               <div className="portfoli-card-img">
                 <div className="img-box v2">
-                  <a href="#" className="block">
+                  <a
+                    href="https://www.cestore-mm.com/product/arduino-uno-development-board/"
+                    className="block"
+                  >
                     <img
                       className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       src="/a.webp"
@@ -279,7 +282,10 @@ void blueTask() {
             <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
               <div className="portfoli-card-img">
                 <div className="img-box v2">
-                  <a href="#" className="block">
+                  <a
+                    href="https://www.cestore-mm.com/product/tcs230-tcs3200-color-sensor-module/"
+                    className="block"
+                  >
                     <img
                       className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       src="/TCS.JPG"
@@ -309,7 +315,10 @@ void blueTask() {
             <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
               <div className="portfoli-card-img">
                 <div className="img-box v2">
-                  <a href="#" className="block">
+                  <a
+                    href="https://www.cestore-mm.com/product/eve-18650-battery/"
+                    className="block"
+                  >
                     <img
                       className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       src="/18.jpg"
@@ -343,7 +352,10 @@ void blueTask() {
             <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
               <div className="portfoli-card-img">
                 <div className="img-box v2">
-                  <a href="#" className="block">
+                  <a
+                    href="https://www.cestore-mm.com/product/mg996r-metal-gear-servo-motor-180/"
+                    className="block"
+                  >
                     <img
                       className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       src="/servo.jpg"
@@ -377,7 +389,10 @@ void blueTask() {
             <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
               <div className="portfoli-card-img">
                 <div className="img-box v2">
-                  <a href="#" className="block">
+                  <a
+                    href="https://www.cestore-mm.com/product/breadboard-jumper-wire/"
+                    className="block"
+                  >
                     <img
                       className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       src="/j.webp"
