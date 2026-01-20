@@ -1,7 +1,7 @@
 export default function AboutUs() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-14">
-      <h1 className="text-4xl font-bold text-blue-400 mb-6">
+      <h1 className="text-4xl font-bold text-blue-400 mb-6 mt-10">
         About This Project
       </h1>
 
@@ -18,6 +18,17 @@ export default function AboutUs() {
         <h1 className="tech-title text-4xl mt-10 text-center md:text-left">
           Our Team Members
         </h1>
+        <div className="flex flex-wrap justify-center gap-8 mt-10 mb-10">
+          <div
+            className="tech-card w-48 md:w-64 lg:w-72 h-72 flex items-end justify-center"
+            data-info={"Dr Nga\nSupervisor"}
+          >
+            <img
+              src="/Dr.jpg"
+              className="w-32 md:w-48 lg:w-56 object-contain"
+            />
+          </div>
+        </div>
 
         <div className="flex flex-wrap justify-center gap-8 mt-10 mb-10">
           <div
@@ -86,7 +97,7 @@ export default function AboutUs() {
           >
             <img
               src="/thida.jpg"
-              className="w-32 md:w-48 lg:w-56 object-contain"
+              className="w-32 md:w-48 lg:w-36 object-contain"
             />
           </div>
         </div>

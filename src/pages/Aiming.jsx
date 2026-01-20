@@ -1,7 +1,7 @@
 export default function Aiming() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-14 space-y-16">
-      <h1 className="text-4xl font-bold text-blue-400 mb-6 text-center">
+      <h1 className="text-4xl font-bold text-blue-400 mb-6 text-center mt-10">
         Project Aiming
       </h1>
 

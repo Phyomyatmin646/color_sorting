@@ -217,7 +217,9 @@ void blueTask() {
   return (
     <>
       <div className="p-10 max-w-6xl mx-auto">
-        <h1 className="text-3xl text-blue-400 mb-4">Hardware & Software</h1>
+        <h1 className="text-3xl text-blue-400 mb-4 mt-10">
+          Hardware & Software
+        </h1>
         <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
           <p className="text-gray-550 leading-relaxed">
             Hardware: Arduino, TCS3200 Color Sensor, Servo Motors, Power Supply.
@@ -248,6 +250,10 @@ void blueTask() {
       {/* Project Section */}
       <section className="tmp-latest-portfolio tmp-section-gap mt-20">
         <div className="container mx-auto">
+          <h2 className="text-3xl text-blue-400 font-bold mb-6 mt-5">
+            Main Hardware Components
+          </h2>
+          <h4>To Click Photo</h4>
           <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth">
             {/* Card 1 */}
             <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">

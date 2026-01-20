@@ -31,7 +31,9 @@ export default function ContactUs() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-14">
-      <h1 className="text-4xl font-bold text-blue-400 mb-6">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-blue-400 mb-6 mt-10">
+        Contact Us
+      </h1>
 
       <div className="grid md:grid-cols-2 gap-10">
         <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
