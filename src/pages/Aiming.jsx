@@ -25,9 +25,6 @@ export default function Aiming() {
       {/* Services / What I Provide Section */}
       <div className="space-y-12" id="service">
         <div className="text-center mb-10">
-          <span className="text-blue-400 uppercase font-semibold tracking-wide">
-            What I Do
-          </span>
           <h2 className="text-3xl font-bold mt-3 text-blue-400">
             What I Provide For You
           </h2>
@@ -40,12 +37,13 @@ export default function Aiming() {
             <div className="flex items-center mb-4">
               <i className="fa-regular fa-code text-blue-400 text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold text-blue-600">
-                UI/UX Design
+                Industrial Automation
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Each one showcases my approach and dedication to detail and
-              creativity.
+              Applying robotics technology to automate material sorting
+              processes in warehouses and industrial environments, improving
+              efficiency and productivity.
             </p>
           </div>
 
@@ -54,11 +52,13 @@ export default function Aiming() {
             <div className="flex items-center mb-4">
               <i className="fa-light fa-palette text-green-400 text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold text-green-600">
-                Web Development
+                Hardware & Software Integration
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Business consulting to provide expert advice to businesses.
+              Designing and integrating hardware components with software
+              systems to ensure accurate control, monitoring, and smooth system
+              operation.
             </p>
           </div>
 
@@ -67,12 +67,13 @@ export default function Aiming() {
             <div className="flex items-center mb-4">
               <i className="fa-light fa-print text-yellow-400 text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold text-yellow-600">
-                Business Solutions
+                Automated Sorting System
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Each one showcases my approach and dedication to detail and
-              creativity.
+              Developing an intelligent sorting mechanism that identifies and
+              classifies objects based on predefined parameters such as color or
+              type.
             </p>
           </div>
 
@@ -81,11 +82,13 @@ export default function Aiming() {
             <div className="flex items-center mb-4">
               <i className="fa-regular fa-handshake text-purple-400 text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold text-purple-600">
-                Profit Partners
+                System Efficiency & Reliability
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Business consulting to provide expert advice to businesses.
+              Focusing on system stability, precision, and reliability to
+              support continuous operation in industrial and warehouse
+              applications.
             </p>
           </div>
         </div>

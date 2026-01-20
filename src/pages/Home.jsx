@@ -6,6 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-20">
         {/* Text */}
+
         <div className="flex-1 text-center md:text-left">
           <h1 className="tech-title text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
             Automatic Color Sorting <br /> Robotic Arm

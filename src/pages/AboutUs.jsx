@@ -85,7 +85,7 @@ export default function AboutUs() {
             data-info={"Thida Aye Min\nTeam Member"}
           >
             <img
-              src="/robotic-arm.png"
+              src="/thida.jpg"
               className="w-32 md:w-48 lg:w-56 object-contain"
             />
           </div>

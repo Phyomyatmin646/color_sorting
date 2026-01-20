@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function HardwareSoftware() {
   const arduinoCode = `
   #include <Servo.h>
@@ -229,9 +228,12 @@ void blueTask() {
         <h2 className="text-2xl text-green-400 mb-2 mt-10">
           Arduino Code Example
         </h2>
-        <h3 className="text-2xl text-green-400 mb-2 mt-10">
-          Install Arduino IDE
-        </h3>
+        <div className="flex items-center space-x-3">
+          <h3 className="text-2xl text-green-400 mb-2 mt-10">
+            Install Arduino IDE
+          </h3>
+          <img src="/IDE.png" alt="" className="w-30 h-20 object-contain" />
+        </div>
         <pre className="bg-gray-900 text-white p-4 rounded overflow-x-auto">
           <code>{arduinoCode}</code>
         </pre>
@@ -246,179 +248,140 @@ void blueTask() {
       {/* Project Section */}
       <section className="tmp-latest-portfolio tmp-section-gap mt-20">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth">
             {/* Card 1 */}
-            <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="portfoli-card-img">
-                <div className="img-box v2">
-                  <a
-                    href="https://www.cestore-mm.com/product/arduino-uno-development-board/"
-                    className="block"
-                  >
-                    <img
-                      className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="/a.webp"
-                      alt="Project"
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center
-                        opacity-0 group-hover:opacity-100 transition-all duration-500"
-                    >
-                      <h3 className="text-xl text-blue-400 font-bold mb-2">
-                        Arduino UNO
-                      </h3>
-                      <p className="text-gray-200 text-sm px-4">
-                        Microprocessor
-                      </p>
-                    </div>
-                  </a>
-                </div>
+            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
+              <div className="img-box v2">
+                <a
+                  href="https://www.cestore-mm.com/product/arduino-uno-development-board/"
+                  className="block"
+                >
+                  <img
+                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="/a.webp"
+                    alt="Arduino UNO"
+                  />
+                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-xl text-blue-400 font-bold mb-2">
+                      Arduino UNO
+                    </h3>
+                    <p className="text-gray-200 text-sm px-4">Microprocessor</p>
+                  </div>
+                </a>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="portfoli-card-img">
-                <div className="img-box v2">
-                  <a
-                    href="https://www.cestore-mm.com/product/tcs230-tcs3200-color-sensor-module/"
-                    className="block"
-                  >
-                    <img
-                      className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="/TCS.JPG"
-                      alt="Project"
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center
-                        opacity-0 group-hover:opacity-100 transition-all duration-500"
-                    >
-                      <h3 className="text-xl text-blue-400 font-bold mb-2">
-                        Color Sensor
-                      </h3>
-                      <p className="text-gray-200 text-sm px-4">
-                        TCS 3200 Input- 3.3V to 5V
-                        <br />
-                        Output- Frequency
-                      </p>
-                    </div>
-                  </a>
-                </div>
+            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
+              <div className="img-box v2">
+                <a
+                  href="https://www.cestore-mm.com/product/tcs230-tcs3200-color-sensor-module/"
+                  className="block"
+                >
+                  <img
+                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="/TCS.JPG"
+                    alt="Color Sensor"
+                  />
+                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-xl text-blue-400 font-bold mb-2">
+                      Color Sensor
+                    </h3>
+                    <p className="text-gray-200 text-sm px-4">
+                      TCS 3200
+                      <br />
+                      Input: 3.3V – 5V
+                      <br />
+                      Output: Frequency
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="portfoli-card-img">
-                <div className="img-box v2">
-                  <a
-                    href="https://www.cestore-mm.com/product/eve-18650-battery/"
-                    className="block"
-                  >
-                    <img
-                      className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="/18.jpg"
-                      alt="Project"
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center
-                        opacity-0 group-hover:opacity-100 transition-all duration-500"
-                    >
-                      <h3 className="text-xl text-blue-400 font-bold mb-2">
-                        EVE Battery
-                      </h3>
-                      <p className="text-gray-200 text-sm px-4">
-                        18650 Lithium Battery
-                        <br />
-                        Output-3.7V to 4.2V, 2600mAh
-                        <br />
-                        High Capacity and Long-lasting
-                        <br />
-                        High Discharge
-                      </p>
-                    </div>
-                  </a>
-                </div>
+            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
+              <div className="img-box v2">
+                <a
+                  href="https://www.cestore-mm.com/product/eve-18650-battery/"
+                  className="block"
+                >
+                  <img
+                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="/18.jpg"
+                    alt="EVE Battery"
+                  />
+                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-xl text-blue-400 font-bold mb-2">
+                      EVE Battery
+                    </h3>
+                    <p className="text-gray-200 text-sm px-4">
+                      18650 Lithium Battery
+                      <br />
+                      Output: 3.7V – 4.2V
+                      <br />
+                      2600mAh
+                      <br />
+                      High Discharge
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
 
             {/* Card 4 */}
-            <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="portfoli-card-img">
-                <div className="img-box v2">
-                  <a
-                    href="https://www.cestore-mm.com/product/mg996r-metal-gear-servo-motor-180/"
-                    className="block"
-                  >
-                    <img
-                      className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="/servo.jpg"
-                      alt="Project"
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center
-                        opacity-0 group-hover:opacity-100 transition-all duration-500"
-                    >
-                      <h3 className="text-xl text-blue-400 font-bold mb-2">
-                        40kg Servo Motor
-                      </h3>
-                      <p className="text-gray-200 text-sm px-4">
-                        High Torque Servo
-                        <br />
-                        Operating Voltage: 4.8V-6.0V
-                        <br />
-                        Speed: 0.16sec/180°
-                        <br />
-                        Torque: 40kg-cm
-                      </p>
-                    </div>
-                  </a>
-                </div>
+            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
+              <div className="img-box v2">
+                <a
+                  href="https://www.cestore-mm.com/product/mg996r-metal-gear-servo-motor-180/"
+                  className="block"
+                >
+                  <img
+                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="/servo.jpg"
+                    alt="Servo Motor"
+                  />
+                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-xl text-blue-400 font-bold mb-2">
+                      40kg Servo Motor
+                    </h3>
+                    <p className="text-gray-200 text-sm px-4">
+                      Operating Voltage: 4.8V – 6.0V
+                      <br />
+                      Speed: 0.16s / 180°
+                      <br />
+                      Torque: 40kg-cm
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
 
-            {/* Add more cards as needed */}
-            <div className="latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="portfoli-card-img">
-                <div className="img-box v2">
-                  <a
-                    href="https://www.cestore-mm.com/product/breadboard-jumper-wire/"
-                    className="block"
-                  >
-                    <img
-                      className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="/j.webp"
-                      alt="Project"
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center
-                        opacity-0 group-hover:opacity-100 transition-all duration-500"
-                    >
-                      <h3 className="text-xl text-blue-400 font-bold mb-2">
-                        Jumper Wires
-                      </h3>
-                      <p className="text-gray-200 text-sm px-4">
-                        For Making Connections
-                        <br />
-                        Female to Male and Male to Male and Female to Male
-                        <br />
-                        20cm Length
-                        <br />
-                        40 Pieces
-                      </p>
-                    </div>
-                  </a>
-                </div>
+            {/* Card 5 */}
+            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
+              <div className="img-box v2">
+                <a
+                  href="https://www.cestore-mm.com/product/breadboard-jumper-wire/"
+                  className="block"
+                >
+                  <img
+                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="/j.webp"
+                    alt="Jumper Wires"
+                  />
+                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-xl text-blue-400 font-bold mb-2">
+                      Jumper Wires
+                    </h3>
+                    <p className="text-gray-200 text-sm px-4">
+                      Female–Male / Male–Male
+                      <br />
+                      20cm Length
+                      <br />
+                      40 Pieces
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
