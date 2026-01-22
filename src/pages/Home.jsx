@@ -29,10 +29,10 @@ export default function Home() {
               System Structure
             </Link>
             <Link
-              to="/guideline"
+              to="/hardware"
               className="px-6 py-3 rounded border border-blue-500 text-blue-400 hover:bg-blue-500/10 transition"
             >
-              User Guideline
+              Hardware & Software
             </Link>
           </div>
         </div>

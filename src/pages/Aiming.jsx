@@ -37,13 +37,11 @@ export default function Aiming() {
             <div className="flex items-center mb-4">
               <i className="fa-regular fa-code text-blue-400 text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold text-blue-600">
-                Industrial Automation
+                Automation
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Applying robotics technology to automate material sorting
-              processes in warehouses and industrial environments, improving
-              efficiency and productivity.
+              Replace repetitive sorting with fast, reliable robotics.
             </p>
           </div>
 
@@ -52,13 +50,12 @@ export default function Aiming() {
             <div className="flex items-center mb-4">
               <i className="fa-light fa-palette text-green-400 text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold text-green-600">
-                Hardware & Software Integration
+                Zero Errors
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Designing and integrating hardware components with software
-              systems to ensure accurate control, monitoring, and smooth system
-              operation.
+              Eliminate human mistakes in categorization, specifically for
+              university library systems.
             </p>
           </div>
 
@@ -71,9 +68,8 @@ export default function Aiming() {
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Developing an intelligent sorting mechanism that identifies and
-              classifies objects based on predefined parameters such as color or
-              type.
+              Connect Computer Vision (software) with Mechanical Motion
+              (hardware)
             </p>
           </div>
 

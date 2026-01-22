@@ -7,10 +7,13 @@ export default function AboutUs() {
 
       <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
         <p className="text-gray-550 leading-relaxed">
-          This project is developed as a university-level robotic system
-          focusing on automation and embedded technologies. It demonstrates how
-          sensors, microcontrollers, and mechanical systems can be integrated to
-          solve real-world industrial problems such as object sorting.
+          Technological University, the library handles thousands of specialized
+          books daily. Manual sorting is: Time-Consuming: Students and staff
+          spend hours returning books to the correct sections. Prone to Error:
+          Misplaced books (e.g., an Electrical Engineering book in the Civil
+          section) make it impossible for other students to find resources.
+          Inefficient: Manual labor could be better spent on research and
+          assisting students rather than physical sorting.
         </p>
       </div>
 
