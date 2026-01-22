@@ -1,6 +1,8 @@
 import React from "react";
+
 export default function HardwareSoftware() {
   const arduinoCode = `
+
   #include <Servo.h>
 
 
@@ -74,19 +76,23 @@ void loop() {
 
   switch (colorDetected) {
     case RED:
-      Serial.println("\n🔴 RED detected");
+      Serial.println("
+🔴 RED detected");
       redTask();
       break;
     case GREEN:
-      Serial.println("\n🟢 GREEN detected");
+      Serial.println("
+🟢 GREEN detected");
       greenTask();
       break;
     case BLUE:
-      Serial.println("\n🔵 BLUE detected");
+      Serial.println("
+🔵 BLUE detected");
       blueTask();
       break;
     default:
-      Serial.println("\n⚪ No color detected");
+      Serial.println("
+⚪ No color detected");
       break;
   }
 
@@ -207,7 +213,8 @@ void blueTask() {
   goHome();
 }
 
-  `;
+  
+`;
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(arduinoCode);
@@ -216,181 +223,108 @@ void blueTask() {
 
   return (
     <>
+      {/* Top Section */}
       <div className="p-10 max-w-6xl mx-auto">
         <h1 className="text-3xl text-blue-400 mb-4 mt-10">
           Hardware & Software
         </h1>
-        <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
-          <p className="text-gray-550 leading-relaxed">
+
+        <div className="bg-gray-800 border border-blue-900 rounded-xl p-6">
+          <p className="text-gray-300 leading-relaxed">
             Hardware: Arduino, TCS3200 Color Sensor, Servo Motors, Power Supply.
-            Software: Arduino IDE, Embedded C, Website coding is React (Vite).
+            <br />
+            Software: Arduino IDE, Embedded C, Website using React (Vite).
           </p>
         </div>
 
-        <h2 className="text-2xl text-green-400 mb-2 mt-10">
-          Arduino Code Example
-        </h2>
-        <div className="flex items-center space-x-3">
-          <h3 className="text-2xl text-green-400 mb-2 mt-10">
-            Install Arduino IDE
-          </h3>
-          <img src="/IDE.png" alt="" className="w-30 h-20 object-contain" />
+        {/* Arduino Section */}
+        <div className="flex items-center gap-4 mt-10">
+          <h2 className="text-2xl text-green-400">Install Arduino IDE</h2>
+          <img
+            src="/IDE.png"
+            alt="Arduino IDE"
+            className="w-32 h-20 object-contain"
+          />
         </div>
-        <pre className="bg-gray-900 text-white p-4 rounded overflow-x-auto">
+
+        <pre className="bg-gray-900 text-white p-4 rounded-xl mt-4 overflow-x-auto">
           <code>{arduinoCode}</code>
         </pre>
+
         <button
           onClick={copyToClipboard}
-          className="mt-3 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition"
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
         >
           Copy Code
         </button>
       </div>
 
-      {/* Project Section */}
-      <section className="tmp-latest-portfolio tmp-section-gap mt-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl text-blue-400 font-bold mb-6 mt-5">
-            Main Hardware Components
-          </h2>
-          <h4>To Click Photo</h4>
-          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth">
-            {/* Card 1 */}
-            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="img-box v2">
-                <a
-                  href="https://www.cestore-mm.com/product/arduino-uno-development-board/"
-                  className="block"
-                >
-                  <img
-                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="/a.webp"
-                    alt="Arduino UNO"
-                  />
-                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="text-xl text-blue-400 font-bold mb-2">
-                      Arduino UNO
-                    </h3>
-                    <p className="text-gray-200 text-sm px-4">Microprocessor</p>
-                  </div>
-                </a>
-              </div>
-            </div>
+      {/* Hardware Cards Section */}
+      <section className="mt-20 px-10">
+        <h2 className="text-3xl text-blue-400 font-bold mb-6">
+          Main Hardware Components
+        </h2>
+        <p className="text-gray-400 mb-4">Click image to open product</p>
 
-            {/* Card 2 */}
-            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="img-box v2">
-                <a
-                  href="https://www.cestore-mm.com/product/tcs230-tcs3200-color-sensor-module/"
-                  className="block"
-                >
-                  <img
-                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="/TCS.JPG"
-                    alt="Color Sensor"
-                  />
-                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="text-xl text-blue-400 font-bold mb-2">
-                      Color Sensor
-                    </h3>
-                    <p className="text-gray-200 text-sm px-4">
-                      TCS 3200
-                      <br />
-                      Input: 3.3V – 5V
-                      <br />
-                      Output: Frequency
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
+        <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6">
+          {/* Card Template */}
+          {[
+            {
+              title: "Arduino UNO",
+              img: "/a.webp",
+              link: "https://www.cestore-mm.com/product/arduino-uno-development-board/",
+              desc: "Microcontroller Board",
+            },
+            {
+              title: "TCS3200 Color Sensor",
+              img: "/TCS.JPG",
+              link: "https://www.cestore-mm.com/product/tcs230-tcs3200-color-sensor-module/",
+              desc: "Color Detection Sensor",
+            },
+            {
+              title: "EVE 18650 Battery",
+              img: "/18.jpg",
+              link: "https://www.cestore-mm.com/product/eve-18650-battery/",
+              desc: "3.7V Lithium Battery",
+            },
+            {
+              title: "40kg Servo Motor",
+              img: "/servo.jpg",
+              link: "https://www.cestore-mm.com/product/mg996r-metal-gear-servo-motor-180/",
+              desc: "High Torque Servo",
+            },
+            {
+              title: "Jumper Wires",
+              img: "/j.webp",
+              link: "https://www.cestore-mm.com/product/breadboard-jumper-wire/",
+              desc: "Male / Female Wires",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="min-w-72 md:min-w-96 snap-center relative group rounded-xl overflow-hidden shadow-lg"
+            >
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
 
-            {/* Card 3 */}
-            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="img-box v2">
-                <a
-                  href="https://www.cestore-mm.com/product/eve-18650-battery/"
-                  className="block"
-                >
-                  <img
-                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="/18.jpg"
-                    alt="EVE Battery"
-                  />
-                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="text-xl text-blue-400 font-bold mb-2">
-                      EVE Battery
-                    </h3>
-                    <p className="text-gray-200 text-sm px-4">
-                      18650 Lithium Battery
-                      <br />
-                      Output: 3.7V – 4.2V
-                      <br />
-                      2600mAh
-                      <br />
-                      High Discharge
-                    </p>
-                  </div>
-                </a>
-              </div>
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center px-4">
+                  <h3 className="text-xl text-blue-400 font-bold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm">{item.desc}</p>
+                </div>
+              </a>
             </div>
-
-            {/* Card 4 */}
-            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="img-box v2">
-                <a
-                  href="https://www.cestore-mm.com/product/mg996r-metal-gear-servo-motor-180/"
-                  className="block"
-                >
-                  <img
-                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="/servo.jpg"
-                    alt="Servo Motor"
-                  />
-                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="text-xl text-blue-400 font-bold mb-2">
-                      40kg Servo Motor
-                    </h3>
-                    <p className="text-gray-200 text-sm px-4">
-                      Operating Voltage: 4.8V – 6.0V
-                      <br />
-                      Speed: 0.16s / 180°
-                      <br />
-                      Torque: 40kg-cm
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="min-w-72 md:min-w-96 snap-center latest-portfolio-card v5 tmp-hover-link relative group overflow-hidden rounded-xl">
-              <div className="img-box v2">
-                <a
-                  href="https://www.cestore-mm.com/product/breadboard-jumper-wire/"
-                  className="block"
-                >
-                  <img
-                    className="img-primary w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="/j.webp"
-                    alt="Jumper Wires"
-                  />
-                  <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="text-xl text-blue-400 font-bold mb-2">
-                      Jumper Wires
-                    </h3>
-                    <p className="text-gray-200 text-sm px-4">
-                      Female–Male / Male–Male
-                      <br />
-                      20cm Length
-                      <br />
-                      40 Pieces
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>
