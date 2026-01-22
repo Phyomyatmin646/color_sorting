@@ -264,7 +264,9 @@ void blueTask() {
         <h2 className="text-3xl text-blue-400 font-bold mb-6">
           Main Hardware Components
         </h2>
-        <p className="text-gray-400 mb-4">Click image to open product</p>
+        <p className="text-gray-400 mb-4">
+          Click and slide images to open products 👉
+        </p>
 
         <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6">
           {/* Card Template */}

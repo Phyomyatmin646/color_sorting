@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 export default function ContactUs() {
+  const form = useRef();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,17 +19,46 @@ export default function ContactUs() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    toast.success("Message sent successfully!", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    // EmailJS sendForm
+    emailjs
 
-    setFormData({ name: "", email: "", message: "" });
+      .sendForm(
+        "service_e5uvnp2", // ✅ Service ID
+
+        "template_a46rbz8", // ✅ Template ID
+
+        form.current,
+
+        "To-yYyvKA8hq0wg4y", // ✅ Public Key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully ✅", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+
+          // Reset form fields
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          toast.error("Failed to send message ❌", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          console.log(error.text);
+        },
+      );
   };
 
   return (
@@ -36,6 +68,7 @@ export default function ContactUs() {
       </h1>
 
       <div className="grid md:grid-cols-2 gap-10">
+        {/* Info Section */}
         <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
           <p className="text-gray-550 leading-relaxed">
             For project inquiries, collaboration, or academic discussion, please
@@ -51,7 +84,9 @@ export default function ContactUs() {
           </p>
         </div>
 
+        {/* Contact Form */}
         <form
+          ref={form}
           onSubmit={handleSubmit}
           className="bg-gray-650 border border-blue-900 rounded-xl p-6 space-y-4"
         >
@@ -95,11 +130,3 @@ export default function ContactUs() {
     </div>
   );
 }
-<div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
-  <p className="text-gray-550 leading-relaxed">
-    This project is developed as a university-level robotic system focusing on
-    automation and embedded technologies. It demonstrates how sensors,
-    microcontrollers, and mechanical systems can be integrated to solve
-    real-world industrial problems such as object sorting.
-  </p>
-</div>;
