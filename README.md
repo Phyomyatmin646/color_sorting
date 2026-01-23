@@ -1,18 +1,54 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Color Sorting
 
-Currently, two official plugins are available:
+A simple web application / project for sorting colors efficiently and visually.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About
 
-## React Compiler
+This project allows users to sort a collection of colors based on predefined rules or algorithms.  
+It’s useful for organizing palettes, building UI themes, or enhancing color processing skills.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🧠 Features
 
-## Expanding the ESLint configuration
+- 🎨 Sorts colors based on hue, brightness, or custom logic
+- 🧩 Easy-to-use UI (if applicable)
+- 📊 Useful for color palette management and design workflows
+- 💡 Helps learn sorting algorithms with visual results
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technology Stack
+
+- React (or vanilla JavaScript)
+- HTML & CSS
+- GitHub for version control
+
+*(Update this section if you add more tools/frameworks)*
+
+---
+
+## 📁 Installation
+
+1. Clone the repository  
+   ```bash
+  git clone https://github.com/Phyomyatmin646/color_sorting.git
+cd color_sorting
+npm install
+npm run dev
+
+---
+
+## 💡 Tips for README
+
+👉 **About / Features** ကို project real logic နဲ့ ပြန်ပြောင်း  
+👉 နောက်ပိုင်း sorting rules / algorithm explanation ထည့် 💻  
+👉 screenshot / demo link ထည့်ရင် ⭐ သာလွန် 👍
+
+---
+
+လိုင်စင်, demo link, screenshot နဲ့ GitHub Pages URL ထည့်ချင်လား?  
+👉 info ပေးလိုက် — ကျွန်တော် README ကို auto update ပေးမယ် 🛠️📄
+::contentReference[oaicite:0]{index=0}
