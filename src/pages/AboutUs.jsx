@@ -24,7 +24,7 @@ export default function AboutUs() {
         <div className="flex flex-wrap justify-center gap-8 mt-10 mb-10">
           <div
             className="tech-card w-48 md:w-64 lg:w-72 h-72 flex items-end justify-center"
-            data-info={"Dr Nga\nSupervisor"}
+            data-info={"Dr.Nga\nSupervisor"}
           >
             <img
               src="/Dr.jpg"
