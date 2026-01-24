@@ -4,6 +4,7 @@ export default function Structure() {
   const images = ["c.jpg", "code.jpg"];
 
   const [index, setIndex] = useState(0);
+  const [zoomImg, setZoomImg] = useState(null);
 
   const prevSlide = () => {
     setIndex(index === 0 ? images.length - 1 : index - 1);
@@ -50,15 +51,14 @@ export default function Structure() {
               </li>
               <li>
                 • <b>Time-Consuming</b>: Students and staff spend hours
-                returning books.
+                returning books to correct sections.
               </li>
               <li>
-                • <b>Prone to Error</b>: Misplaced books make resources
-                difficult to find.
+                • <b>Prone to Error</b>: Misplaced books make resources hard to
+                find.
               </li>
               <li>
-                • <b>Inefficient</b>: Manual labor could be used for research
-                instead.
+                • <b>Inefficient</b>: Labor could be used for research.
               </li>
             </ul>
           </div>
@@ -68,7 +68,8 @@ export default function Structure() {
             <img
               src={images[index]}
               alt="Problem Illustration"
-              className="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg transition-all duration-500"
+              onClick={() => setZoomImg(images[index])}
+              className="w-full h-72 md:h-80 object-contain rounded-xl shadow-lg transition-all duration-500 mt-10 cursor-zoom-in hover:shadow-2xl"
             />
 
             {/* Left Button */}
@@ -93,34 +94,30 @@ export default function Structure() {
       {/* Our Solution Section */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 dark:text-blue-400 text-center mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 dark:text-blue-400 text-center mb-12 -mt-2.5">
             Our Solution
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-blue-900 hover:-translate-y-1 transition">
               <h3 className="text-xl font-bold mb-4 text-blue-900 dark:text-blue-400">
                 Our Thinking
               </h3>
               <p className="text-gray-700 dark:text-gray-200">
-                Robots should see and react, not just follow fixed paths. Smart,
-                low-cost, and adaptive logic is our focus.
+                Robots should see and react, not just follow fixed paths.
+                Smart,low-cost, and adaptive logic is our focus.
               </p>
             </div>
 
-            {/* Card 2 */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-blue-900 hover:-translate-y-1 transition">
               <h3 className="text-xl font-bold mb-4 text-blue-900 dark:text-blue-400">
                 Benefits
               </h3>
               <p className="text-gray-700 dark:text-gray-200">
-                Faster sorting, reduced human error, and improved operational
-                efficiency.
+                Faster sorting, reduced human error.and improved operational
               </p>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-blue-900 hover:-translate-y-1 transition">
               <h3 className="text-xl font-bold mb-4 text-blue-900 dark:text-blue-400">
                 Our Mission
@@ -133,6 +130,30 @@ export default function Structure() {
           </div>
         </div>
       </section>
+
+      {/* ================= Zoom Modal ================= */}
+      {zoomImg && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setZoomImg(null)}
+        >
+          <div className="relative max-w-5xl w-full px-4">
+            <img
+              src={zoomImg}
+              alt="Zoomed"
+              className="w-full max-h-[90vh] object-contain rounded-lg shadow-2xl bg-black"
+            />
+
+            {/* Close Button */}
+            <button
+              onClick={() => setZoomImg(null)}
+              className="absolute top-4 right-6 text-white text-3xl font-bold hover:text-red-400"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

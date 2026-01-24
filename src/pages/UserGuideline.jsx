@@ -30,16 +30,16 @@ export default function UserGuideline() {
             <img
               src="v1.jpg"
               alt="User Guideline Illustration"
-              className="w-full h-56 md:h-64 object-cover"
+              className="w-full h-56 md:h-auto object-contain"
             />
           </div>
 
           {/* Video */}
-          <div className="rounded-xl overflow-hidden shadow-lg border border-blue-900">
+          <div className="rounded-xl overflow-hidden shadow-lg border border-blue-900 aspect-video">
             <video
               src="v.mp4"
               controls
-              className="w-full h-56 md:h-64 object-cover"
+              className="w-full h-full md:h-64 object-contain"
             >
               Your browser does not support the video tag.
             </video>
