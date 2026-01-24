@@ -9,7 +9,7 @@ export default function Home() {
 
         <div className="flex-1 text-center md:text-left">
           <h1 className="tech-title text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
-            Automatic Color Sorting <br /> Robotic Arm
+            Intelligence Color Sorting <br /> Robotic Arm
           </h1>
           <div className="bg-gray-650 border border-blue-900 rounded-xl p-6">
             <p className="text-gray-550 leading-relaxed">
