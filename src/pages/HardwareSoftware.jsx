@@ -3,14 +3,12 @@ import React from "react";
 export default function HardwareSoftware() {
   const arduinoCode = `
 
-  #include <Servo.h>
-
+ #include <Servo.h>
 
 Servo servoWAIST, servoSHOULDER, servoELBOW, servoWRISTPITCH, servoWRISTROLL, servoGRIPPER;
 
-
 int HOME_WAIST    = 90;
-int HOME_SHOULDER = 100;
+int HOME_SHOULDER = 110;
 int HOME_ELBOW    = 80;
 int HOME_PITCH    = 170;
 int HOME_ROLL     = 90;
@@ -76,23 +74,19 @@ void loop() {
 
   switch (colorDetected) {
     case RED:
-      Serial.println("
-🔴 RED detected");
+      Serial.println("🔴 RED detected");
       redTask();
       break;
     case GREEN:
-      Serial.println("
-🟢 GREEN detected");
+      Serial.println("🟢 GREEN detected");
       greenTask();
       break;
     case BLUE:
-      Serial.println("
-🔵 BLUE detected");
+      Serial.println("🔵 BLUE detected");
       blueTask();
       break;
     default:
-      Serial.println("
-⚪ No color detected");
+      Serial.println("⚪ No color detected");
       break;
   }
 
@@ -124,9 +118,9 @@ int readColorValue(bool s2v, bool s3v) {
 Color detectColor() {
   Color detected = NONE;
 
-  bool redInRange   = (redVal   >= 80  && redVal   <= 180);
-  bool greenInRange = (greenVal >= 120 && greenVal <= 210);
-  bool blueInRange  = (blueVal  >= 70  && blueVal  <= 200);
+  bool redInRange   = (redVal   <= 90 );
+  bool greenInRange = (greenVal <= 130);
+  bool blueInRange  = (blueVal  <= 100 );
 
   int minVal = 1500;
 
@@ -186,30 +180,30 @@ void goHome() {
 
 void redTask() {
   moveArm(90, 100, 70, 160, 90, GRIP_OPEN);   // Above
-  moveArm(90, 110, 70, 140, 90, GRIP_CLOSE);  // Pick
-  moveArm(90, 100, 60, 160, 90, GRIP_CLOSE);  // Lift
-  moveArm(45, 100, 60, 160, 90, GRIP_CLOSE);  // Rotate
-  moveArm(45, 100, 70, 140, 90, GRIP_OPEN);   // Drop
+  moveArm(90, 100, 70, 140, 90, GRIP_CLOSE);  // Pick
+  moveArm(90, 110, 60, 160, 90, GRIP_CLOSE);  // Lift
+  moveArm(45, 110, 60, 160, 90, GRIP_CLOSE);  // Rotate
+  moveArm(45, 110, 70, 140, 90, GRIP_OPEN);   // Drop
   goHome();
 }
 
 
 void greenTask() {
   moveArm(90, 100, 70, 160, 90, GRIP_OPEN);   // Above
-  moveArm(90, 110, 70, 140, 90, GRIP_CLOSE);  // Pick
-  moveArm(90, 100, 60, 160, 90, GRIP_CLOSE);  // Lift
-  moveArm(180, 100, 60, 160, 90, GRIP_CLOSE); // Rotate
-  moveArm(180, 100, 70, 140, 90, GRIP_OPEN);  // Drop
+  moveArm(90, 100, 70, 140, 90, GRIP_CLOSE);  // Pick
+  moveArm(90, 110, 60, 160, 90, GRIP_CLOSE);  // Lift
+  moveArm(180, 110, 60, 160, 90, GRIP_CLOSE); // Rotate
+  moveArm(180, 110, 70, 140, 90, GRIP_OPEN);  // Drop
   goHome();
 }
 
 
 void blueTask() {
   moveArm(90, 100, 70, 160, 90, GRIP_OPEN);   // Above
-  moveArm(90, 110, 70, 140, 90, GRIP_CLOSE);  // Pick
-  moveArm(90, 100, 60, 160, 90, GRIP_CLOSE);  // Lift
-  moveArm(140, 100, 60, 160, 90, GRIP_CLOSE); // Rotate
-  moveArm(140, 100, 70, 140, 90, GRIP_OPEN);  // Drop
+  moveArm(90, 100, 70, 140, 90, GRIP_CLOSE);  // Pick
+  moveArm(90, 110, 60, 160, 90, GRIP_CLOSE);  // Lift
+  moveArm(140, 110, 60, 160, 90, GRIP_CLOSE); // Rotate
+  moveArm(140, 110, 70, 140, 90, GRIP_OPEN);  // Drop
   goHome();
 }
 
