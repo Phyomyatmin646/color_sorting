@@ -76,16 +76,6 @@ export default function AboutUs() {
 
           <div
             className="tech-card w-48 md:w-64 lg:w-72 h-72 flex items-end justify-center"
-            data-info={"Thwel Hmue Eain\nTeam Member"}
-          >
-            <img
-              src="/THE.jpg"
-              className="w-32 md:w-48 lg:w-42 object-contain"
-            />
-          </div>
-
-          <div
-            className="tech-card w-48 md:w-64 lg:w-72 h-72 flex items-end justify-center"
             data-info={"Thida Aye Min\nTeam Member"}
           >
             <img
