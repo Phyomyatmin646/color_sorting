@@ -35,18 +35,9 @@ It’s useful for organizing palettes, building UI themes, or enhancing color pr
 1. Clone the repository  
    ```bash
   git clone https://github.com/Phyomyatmin646/color_sorting.git
-cd color_sorting
-npm install
-npm run dev
-
----
-
-## 💡 Tips for README
-
-👉 **About / Features** ကို project real logic နဲ့ ပြန်ပြောင်း  
-👉 နောက်ပိုင်း sorting rules / algorithm explanation ထည့် 💻  
-👉 screenshot / demo link ထည့်ရင် ⭐ သာလွန် 👍
-
+- cd color_sorting
+- npm install
+- npm run dev
 ---
 
 လိုင်စင်, demo link, screenshot နဲ့ GitHub Pages URL ထည့်ချင်လား?  
