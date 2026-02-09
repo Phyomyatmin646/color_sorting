@@ -82,25 +82,6 @@ export default function AboutUs() {
               className="w-32 md:w-38 lg:w-34 object-contain"
             />
           </div>
-
-          <div
-            className="tech-card w-48 md:w-64 lg:w-72 h-72 flex items-end justify-center"
-            data-info={"Thwel Hmue Eain\nTeam Member"}
-          >
-            <img
-              src="/THE.jpg"
-              className="w-32 md:w-48 lg:w-40 object-contain"
-            />
-          </div>
-          <div
-            className="tech-card w-48 md:w-64 lg:w-72 h-72 flex items-end justify-center"
-            data-info={"Thandar Htet Aung\nTeam Member"}
-          >
-            <img
-              src="/TDHA.jpg"
-              className="w-32 md:w-48 lg:w-36 object-contain"
-            />
-          </div>
         </div>
       </section>
     </div>
